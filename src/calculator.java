@@ -10,13 +10,14 @@ public class calculator {
             try {
 
 
-                System.out.println("Calculator Menu:\n" +
-                        "1. Addition (+) press 1\n" +
-                        "2. Subtraction (-) press 2\n" +
-                        "3. Multiplication (*) press 3\n" +
-                        "4. Division (/) press 4\n" +
-                        "5. Exit the program press 5\n" +
-                        "Enter your choice down below");
+                System.out.println("""
+                        Calculator Menu:
+                        1. Addition (+) press 1
+                        2. Subtraction (-) press 2
+                        3. Multiplication (*) press 3
+                        4. Division (/) press 4
+                        5. Exit the program press 5
+                        Enter your choice down below""");
 
                 int addition = 1;
                 int subtraction = 2;
@@ -26,7 +27,6 @@ public class calculator {
                 int option = scan.nextInt();
                 char yes = 'Y';
                 char no = 'N';
-
 
                 if (option == addition) {
                     for (int i = 0; true; i++) {
@@ -40,8 +40,7 @@ public class calculator {
                         }
 
                     }
-                }
-                else if (option == subtraction) {
+                } else if (option == subtraction) {
                     for (int i = 0; true; i++) {
                         subtraction(scan.nextInt(), scan.nextInt());
                         System.out.println("continue " + yes + " or " + no + " ?");
@@ -51,9 +50,7 @@ public class calculator {
                             break;
                         }
                     }
-                }
-
-                else if (option == multiplication) {
+                } else if (option == multiplication) {
                     for (int i = 0; true; i++) {
                         multiplication(scan.nextInt(), scan.nextInt());
                         System.out.println("continue " + yes + " or " + no + " ?");
@@ -63,8 +60,7 @@ public class calculator {
                             break;
                         }
                     }
-                }
-                else if (option == division) {
+                } else if (option == division) {
                     for (int i = 0; true; i++) {
                         division(scan.nextInt(), scan.nextInt());
                         System.out.println("continue " + yes + " or " + no + " ?");
@@ -74,8 +70,7 @@ public class calculator {
                             break;
                         }
                     }
-                }
-                else {
+                } else {
                     if (option == exit) {
                         System.out.println("""
                                 You have decided to exit the program,
@@ -96,7 +91,6 @@ public class calculator {
     }
 
 
-
     static void addition(int a, int b) {
         double add = a + b;
         System.out.println("You add " + a + " + " + b + " = " + add);
@@ -106,6 +100,7 @@ public class calculator {
         double subtract = a - b;
         System.out.println("You subtracted " + a + " - " + b + " = " + subtract);
     }
+
     static void multiplication(int a, int b) {
         double result = a * b;
         System.out.println("You multiply " + a + " * " + b + " = " + result);
