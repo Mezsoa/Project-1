@@ -25,7 +25,7 @@ public class GuessRandomNumber {
                 } else if (higher(number) < randomNum) {
                         System.out.println("the correct number are higher then your input, try again");
 
-                } else if (lower(number) > randomNum) {
+                } else {
                     System.out.println("the correct number are lower then your input, try again");
 
                 }
@@ -42,17 +42,14 @@ public class GuessRandomNumber {
     }
 
     static int printRandomNum() {
-        int randomNum = (int) (Math.random() * 100) + 2;
-        return randomNum;
+        return (int) (Math.random() * 100) + 1;
     }
 
     static int higher(int a) {
-        int higher = a;
-        return higher;
+        return a;
     }
     static int lower(int a) {
-        int lower = a;
-        return lower;
+        return a;
     }
 
 }
